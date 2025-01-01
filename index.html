@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Input and Output</title>
+</head>
+<body>
+    <h1>Simple Input and Output</h1>
+    <form id="userForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <button type="button" onclick="displayOutput()">Submit</button>
+    </form>
+    <p id="output" style="margin-top: 20px; font-weight: bold;"></p>
+
+    <script>
+        function displayOutput() {
+            const name = document.getElementById("name").value;
+            if (name) {
+                document.getElementById("output").innerText = "Hello, " + name + "!";
+            } else {
+                document.getElementById("output").innerText = "Please enter your name.";
+            }
+        }
+    </script>
+</body>
+</html>
